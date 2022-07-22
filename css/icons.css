@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'icomoon-R';
+  src:  url('../fonts/icomoon-R.eot?ro5q33');
+  src:  url('../fonts/icomoon-R.eot?ro5q33#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon-R.ttf?ro5q33') format('truetype'),
+    url('../fonts/icomoon-R.woff?ro5q33') format('woff'),
+    url('../fonts/icomoon-R.svg?ro5q33#icomoon-R') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-R"]::before, [class*=" icon-R"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon-R' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Remailicon:before {
+  content: "\e917";
+  color: #173292;
+}
+.icon-Rlocationicon:before {
+  content: "\e918";
+  color: #173292;
+}
+.icon-Rphoneicon:before {
+  content: "\e919";
+  color: #173292;
+}
+.icon-Rpointppointpointicon:before {
+  content: "\e91a";
+  color: #173292;
+}
+.icon-RStar.path1:before {
+  content: "\e915";
+  color: rgb(0, 0, 0);
+}
+.icon-RStar.path2:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-Rvk-social-network-logo_icon-iconscom_73339:before {
+  content: "\e90b";
+}
+.icon-ROdnoklassniki_icon-iconscom_55854:before {
+  content: "\e90e";
+}
+.icon-Rdownloadbranbuk:before {
+  content: "\e90f";
+  color: #010f48;
+}
+.icon-Rnext:before {
+  content: "\e910";
+  color: #010f48;
+}
+.icon-Rtelegram:before {
+  content: "\e911";
+}
+.icon-Rtwitter:before {
+  content: "\e912";
+}
+.icon-Rwatchvideo:before {
+  content: "\e913";
+  color: #010f48;
+}
+.icon-Ryoutube:before {
+  content: "\e914";
+}
+.icon-Rburger:before {
+  content: "\e90a";
+}
+.icon-Rc6ba546db26366a011c19329ec5aa:before {
+  content: "\e908";
+}
+.icon-Rarrowleft:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-Rarrowright:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-RFrame:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-Rfacebook-f:before {
+  content: "\e900";
+}
+.icon-Rfi-rr-align-left:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-Rfi-rr-at:before {
+  content: "\e905";
+}
+.icon-Rfi-rr-marker:before {
+  content: "\e906";
+}
+.icon-Rfi-rr-phone-call:before {
+  content: "\e907";
+}
+.icon-Rinstagram:before {
+  content: "\e909";
+}
+.icon-Rtelegram-plane:before {
+  content: "\e90c";
+}
+.icon-Rworld:before {
+  content: "\e90d";
+}

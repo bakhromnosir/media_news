@@ -1,0 +1,64 @@
+https://xn--c1acbl2abdlkab1og.xn--p1ai/
+
+<script>
+    const apiUrl = 'https://mproweb.uz/iws/infomir_currencys_api/',
+    currencys = ["USD", "EUR", 'RUB'],
+	stat_files = 'https://bugun.uz/wp-content/uploads/up.svg';
+// 	currencys = ["USD", "EUR", 'RUB', 'TRY', 'CNY', 'KZT'];
+	renderCurs();
+    async function renderCurs() {
+        await fetch(apiUrl)
+            .then((res) => {if (res.ok) return res.json()})
+            .then((data) => {
+                console.log(data);
+                data.CURS = Object.values(data.CURS);
+                let result = '';
+                data.CURS.forEach((curs) => {
+                    if(currencys.includes(curs.Ccy)){
+                        result += `<li class="curs-item">
+                        <div class="curs-item-box">
+							<div class="curs-diff"><!--<span>${curs.Diff}</span> --><img src="https://bugun.uz/wp-content/uploads/${(curs.Diff > 0 ? 'up': 'dn')}.svg"></div>
+							<span class="curs-sym">${curs.Ccy}<!-- ${curs.sym} --></span><span class="curs-value ${(curs.Diff > 0 ? 'up-color': 'dn-color')}">${curs.Rate}</span></div>
+                        </li>`;
+                    }
+                });
+                cursbox.innerHTML = `<ul class="curs-items weather-box"><li class="curs-item weather"></li></ul>`
+				+ `<ul class="curs-items">${result}</ul>`;
+            });
+    }
+window.onload = async ()=>{
+	const weather = document.querySelector(".weather");
+        await fetch("https://bugun.uz/poster_api/weatherapi.php")
+		.then((res) => {if (res.ok) return res.json()})
+		.then((data) => {
+			console.log(data);
+			if(data.success){
+				data.weather = Object.values(data.result.weather);
+				console.log(data.weather);
+				let result = '';
+				data.weather.forEach((item) => {
+				result += `<div class="weather-item">
+					<img src="${item.data.icon}">
+					<span class="weather-value">${item.data.temp}&#176;</span>
+					<span class="weather-cite">${item.city_krl}</span>
+				</div>`;
+				});
+				weather.innerHTML = result;
+				let i = 0;
+				setInterval(()=>{
+					weather.style.transform = "translateY("+i+"px)";
+					console.log(i-=43);
+					if(i < -558){
+						i = 0;
+					}
+				}, 4000);
+			}
+			weather.addEventListener('click', dropDowner);
+			weather.addEventListener('mouseover', dropDowner);
+        });
+		function dropDowner(){
+			// weather.style.transform = "translateY(0px)";
+			console.log("ishladi");
+		}
+}
+</script>
