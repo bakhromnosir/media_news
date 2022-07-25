@@ -84,6 +84,15 @@
     .about__history_block_h1{
         font-size: 32px;
     }
+
+    .section2{
+        margin-top: 0;
+    }
+
+    .anhcor {
+        position: absolute;
+        top: -155px;
+    }
 }
 
 @media (max-width:992px){

@@ -334,7 +334,7 @@ $(window).scroll(function() {
 
   
 /* history header inner link anchor */
-$(document).ready(function() {
+/* $(document).ready(function() {
   $('a[href*=#]').bind('click', function(e) {
       e.preventDefault(); // prevent hard jump, the default behavior
 
@@ -348,7 +348,7 @@ $(document).ready(function() {
       });
 
       return false;
-  });
+  });d
 });
 
 $(window).scroll(function() {
@@ -368,8 +368,16 @@ $(window).scroll(function() {
           $('.history__right_navigation_ul a').eq(i).addClass('active');
       }
   });
-}).scroll();
+}).scroll(); */
 
+
+$(window).on('scroll', function() {
+  var scrolled = $(this).scrollTop();
+
+  $('.section').filter(function() {
+       return scrolled >= $(this).offset().top-150;
+  }).addClass('active');
+});
 /* history header inner link anchor */
 
 

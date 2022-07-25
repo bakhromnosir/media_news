@@ -1320,6 +1320,7 @@ footer{
 
 .section2{
     position: relative;
+    margin-top: 101px;
 }
 
 .right__navigation_ul a{
@@ -1331,6 +1332,12 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+}
+
+.anhcor{
+    position: absolute;
+    top: -73px;
 
 }
 
@@ -1638,7 +1645,6 @@ footer{
     padding: 80px 0;
     background-color: #010F40;
     position: relative;
-    margin-top: 10px;
 }
 
 .cart__page_mobile_app .container-md{
@@ -2145,6 +2151,7 @@ footer{
     line-height: 48px;
     color: #000000;
     margin-bottom: 2px;
+    opacity: 0.4;
 }
 
 .history__right_navigation_p{
@@ -2152,6 +2159,15 @@ footer{
     font-size: 14px;
     line-height: 17px;
     color: #000000;
+    opacity: 0.3;
+    transition: all 0.3s linear;
+}
+
+.history__right_navigation_a.active .history__right_navigation_h1{
+    opacity: 1;
+    font-size: 72px;
+    line-height: 80px;
+    transition: all 0.3s linear; 
 }
 
 /* .history__right_navigation{
